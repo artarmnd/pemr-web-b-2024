@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Formulir Aplikasi Rekening Bank BRI</title>
+    <style>body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f26e;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+    
+    .container {
+        
+        width: 900px;
+        background-color: white;
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .header .form-title {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+    .header .bank-logo {
+        text-align: right;
+    }
+    
+    .cif-section {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .cif-label {
+        background-color: black;
+        color: white;
+        padding: 5px 10px;
+        font-weight: bold;
+        font-size: 16px;
+        margin-right: 5px;
+    }
+    
+    .cif-boxes {
+        display: flex;
+    }
+    
+    .cif-boxes input {
+        width: 40px;
+        height: 40px;
+        border: 1px solid #ccc;
+        margin-right: 5px;
+        text-align: center;
+        font-size: 18px;
+    }
+    
+    .instructions {
+        font-size: 12px;
+        color: #666;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .header-nasabah {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.header-title {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.baru-pengkinian {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.baru-pengkinian label {
+    margin-right: 15px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+        .container {
+            width: 900px;
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+            flex: 1;
+        }
+
+        .form-group label {
+            margin-right: 5px;
+            font-size: 14px;
+            min-width: 150px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="date"],
+        .form-group select {
+            padding: 5px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .radio-group label,
+        .checkbox-group label {
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        
+        .checkbox-group label {
+            margin-right: 15px;
+        }
+
+        
+        @media (max-width: 768px) {
+            .form-row {
+                flex-direction: column;
+            }
+
+            .form-group {
+                margin-bottom: 10px;
+            }
+
+            .form-group label {
+                min-width: unset;
+            }
+        }
+        .form-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.form-group label {
+    margin-right: 5px;
+    font-size: 14px;
+    min-width: 100px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group select {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.cif-boxes input {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.checkbox-group label,
+.radio-group label {
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+}
+
+
+    
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <div class="header">
+        <div class="form-title">
+            Formulir Aplikasi Rekening <br>
+            <span class="subtitle">Perorangan(AR-01)</span><br>
+            
+        </div>
+        <div class="bank-logo">
+            <img src="images.png" alt="Logo Bank BRI" width="100">
+            <div>Melayani Dengan Setulus Hati</div>
+        </div>
+    </div>
+
+
+    <div class="cif-section">
+        <div class="cif-label">CIF</div>
+        <div class="cif-boxes">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+        </div>
+    </div>
+
+    <div class="instructions">
+        Mohon diisi oleh nasabah dengan huruf cetak pada kolom berwarna putih dan berikan tanda (✔) sesuai pilihan
+    </div>
+
+    
+    <div class="form-row">
+        <label>Nama lengkap:</label>
+        <input type="text" name="nama_lengkap" style="width: 95%; padding: 10px; margin-top: 5px;">
+    </div>
+    <div class="instructions">
+        Nama sesuai Kartu ID :diinput langsung oleh Petugas ke sistem
+    </div>
+    <div class="header-nasabah">
+        <div class="header-title">
+            1. DATA NASABAH <br>
+            <span class="subtitle">DATA PRIBADI</span>
+        </div>
+        <div class="baru-pengkinian">
+            <label><input type="radio" name="status_nasabah" value="baru"> Baru</label>
+            <label><input type="radio" name="status_nasabah" value="pengkinian"> Pengkinian</label>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <label>Jenis Kelamin:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="jenis_kelamin" value="pria"> Pria</label>
+                <label><input type="radio" name="jenis_kelamin" value="wanita"> Wanita</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Kewarganegaraan:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="kewarganegaraan" value="wni"> WNI</label>
+                <label><input type="radio" name="kewarganegaraan" value="wna"> WNA</label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="form-row">
+        <div class="form-group">
+            <label>Tempat Lahir:</label>
+            <input type="text" name="tempat_lahir">
+        </div>
+        <div class="form-group">
+            <label>Tanggal Lahir:</label>
+            <input type="date" name="tanggal_lahir">
+        </div>
+        <div class="form-group">
+            <label>Negara:</label>
+            <input type="text" name="negara">
+        </div>
+    </div>
+    
+    <div class="form-row">
+        <div class="form-group" style="flex: 1;">
+            <label>Nama gadis ibu kandung:</label>
+            <input type="text" name="nama_ibu" style="width: 100%;">
+        </div>
+    </div>
+    
+    <div class="form-row">
+        <label>Jenis Identitas:</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="jenis_identitas" value="ktp"> KTP</label>
+            <label><input type="checkbox" name="jenis_identitas" value="sim"> SIM</label>
+            <label><input type="checkbox" name="jenis_identitas" value="passport"> Passport dilampiri KITAP/KITAS/KIMS</label>
+        </div>
+    </div>
+    
+    <div class="form-row">
+        <div class="form-group">
+            <label>Nomor Identitas:</label>
+            <input type="text" name="nomor_identitas">
+        </div>
+        <div class="form-group">
+            <label>Tanggal Terbit:</label>
+            <input type="date" name="tanggal_terbit">
+        </div>
+        <div class="form-group">
+            <label>Tanggal Kadaluwarsa:</label>
+            <input type="date" name="tanggal_kadaluwarsa">
+        </div>
+    </div>
+    <div class="container">
+    
+        <!-- Pendidikan Terakhir -->
+        <div class="form-row">
+            <label>Pendidikan Terakhir:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="pendidikan" value="sd"> SD</label>
+                <label><input type="checkbox" name="pendidikan" value="sltp"> SLTP</label>
+                <label><input type="checkbox" name="pendidikan" value="slta"> SLTA</label>
+                <label><input type="checkbox" name="pendidikan" value="s1"> S1</label>
+                <label><input type="checkbox" name="pendidikan" value="s2"> S2</label>
+                <label><input type="checkbox" name="pendidikan" value="s3"> S3</label>
+                <label><input type="checkbox" name="pendidikan" value="lainnya"> Lainnya</label>
+            </div>
+        </div>
+    
+        <!-- Agama -->
+        <div class="form-row">
+            <label>Agama:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="agama" value="islam"> Islam</label>
+                <label><input type="checkbox" name="agama" value="katolik"> Katolik</label>
+                <label><input type="checkbox" name="agama" value="protestan"> Protestan</label>
+                <label><input type="checkbox" name="agama" value="budha"> Budha</label>
+                <label><input type="checkbox" name="agama" value="hindu"> Hindu</label>
+                <label><input type="checkbox" name="agama" value="lainnya"> Lainnya</label>
+            </div>
+        </div>
+    
+        <!-- Status Perkawinan -->
+        <div class="form-row">
+            <label>Status Perkawinan:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="status_perkawinan" value="lajang"> Lajang</label>
+                <label><input type="checkbox" name="status_perkawinan" value="kawin"> Kawin</label>
+                <label><input type="checkbox" name="status_perkawinan" value="janda_duda"> Janda/Duda</label>
+            </div>
+        </div>
+    
+        <!-- Kode Pos -->
+        <div class="form-row">
+            <label>Kode Pos sesuai alamat pada ID:</label>
+            <div class="cif-boxes">
+                <input type="text" maxlength="1">
+                <input type="text" maxlength="1">
+                <input type="text" maxlength="1">
+                <input type="text" maxlength="1">
+                <input type="text" maxlength="1">
+            </div>
+        </div>
+    
+        <!-- Alamat Domisili -->
+        <div class="form-row">
+            <label>Alamat Domisili (Diisi hanya apabila berbeda dengan alamat pada Identitas):</label>
+            <input type="text" name="alamat_domisili" style="width: 100%;">
+        </div>
+    
+        <!-- RT/RW, Kelurahan, Kecamatan, Kota, Provinsi, Kode Pos -->
+        <div class="form-row">
+            <div class="form-group">
+                <label>RT/RW:</label>
+                <input type="text" name="rt_rw" style="width: 60px;">
+            </div>
+            <div class="form-group">
+                <label>Kelurahan/Desa:</label>
+                <input type="text" name="kelurahan" style="width: 200px;">
+            </div>
+        </div>
+    
+        <div class="form-row">
+            <div class="form-group">
+                <label>Kecamatan:</label>
+                <input type="text" name="kecamatan" style="width: 100%;">
+            </div>
+            <div class="form-group">
+                <label>Kota:</label>
+                <input type="text" name="kota" style="width: 100%;">
+            </div>
+            <div class="form-group">
+                <label>Provinsi:</label>
+                <input type="text" name="provinsi" style="width: 100%;">
+            </div>
+        </div>
+    
+        <div class="form-row">
+            <label>Kode Pos sesuai pada alamat id:</label>
+            <div class="cif-boxes">
+                <input type="text" maxlength="1">
+                <input type="text" maxlength="1">
+                <input type="text" maxlength="1">
+                <input type="text" maxlength="1">
+                <input type="text" maxlength="1">
+            </div>
+        </div>
+    
+    </div>
+    
+</div>
+
+    
+</body>
+</html>
